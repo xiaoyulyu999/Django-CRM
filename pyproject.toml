@@ -1,0 +1,16 @@
+[project]
+name = "djangocrm"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+classifiers = [ "Programming Language :: Python :: 3 :: Only" ]
+dependencies = [
+  "django>=6",
+  "pre-commit>=4.5.1",
+]
+
+[dependency-groups]
+dev = [
+  "pip>=25.3",
+]
