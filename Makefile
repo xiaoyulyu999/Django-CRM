@@ -18,6 +18,10 @@ migrations:
 superuser:
 	uv run python src/manage.py createsuperuser
 
+.PHONY: app
+app:
+	uv run python src/manage.py startapp $(name)
+
 .PHONY: install-pre-commit
 install-pre-commit:
 	uv run pre-commit install
