@@ -1,7 +1,6 @@
 .PHONY: run-server
 run-server:
-	uv run python src/manage.py runserver 0.0.0.0:8000
-
+	uv run python src/manage.py runserver
 .PHONY: install
 install:
 	uv install --no-root
