@@ -30,7 +30,8 @@ INSTALLED_APPS = [
     # all auth
     'allauth',
     'allauth.account',
-    'allauth.socialaccount.providers.linkedin',
+    'allauth.socialaccount',
+    # 'allauth.socialaccount.providers.linkedin',
 ]
 
 MIDDLEWARE = [
@@ -115,3 +116,10 @@ STATIC_URL = "static/"
 # Googlere API
 GOOGLE_OAUTH_CLIENT_SECRET = os.environ.get("GOOGLE_OAUTH_CLIENT_SECRET")
 GOOGLE_OAUTH_CLIENT_ID = os.environ.get("GOOGLE_OAUTH_CLIENT_ID")
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+
+    'allauth.account.auth_backends.AuthenticationBackend',
+
+]
