@@ -107,6 +107,11 @@ name = "djangocrm"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "asgiref" },
+    { name = "cachetools" },
+    { name = "certifi" },
+    { name = "cfgv" },
+    { name = "charset-normalizer" },
     { name = "django" },
     { name = "django-googler" },
     { name = "pre-commit" },
@@ -120,6 +125,11 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+    { name = "asgiref", specifier = "==3.11.0" },
+    { name = "cachetools", specifier = "==6.2.4" },
+    { name = "certifi", specifier = "==2025.11.12" },
+    { name = "cfgv", specifier = "==3.5.0" },
+    { name = "charset-normalizer", specifier = "==3.4.4" },
     { name = "django", specifier = ">=6" },
     { name = "django-googler", specifier = ">=0.0.20" },
     { name = "pre-commit", specifier = ">=4.5.1" },

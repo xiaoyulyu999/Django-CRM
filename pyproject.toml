@@ -6,6 +6,11 @@ readme = "README.md"
 requires-python = ">=3.14"
 classifiers = [ "Programming Language :: Python :: 3 :: Only" ]
 dependencies = [
+  "asgiref==3.11.0",
+  "cachetools==6.2.4",
+  "certifi==2025.11.12",
+  "cfgv==3.5.0",
+  "charset-normalizer==3.4.4",
   "django>=6",
   "django-googler>=0.0.20",
   "pre-commit>=4.5.1",

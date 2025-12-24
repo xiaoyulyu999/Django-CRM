@@ -105,6 +105,6 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
-## Googlere API
+# Googlere API
 GOOGLE_OAUTH_CLIENT_SECRET = os.environ.get("GOOGLE_OAUTH_CLIENT_SECRET")
 GOOGLE_OAUTH_CLIENT_ID = os.environ.get("GOOGLE_OAUTH_CLIENT_ID")
