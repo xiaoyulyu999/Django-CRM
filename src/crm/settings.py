@@ -26,6 +26,11 @@ INSTALLED_APPS = [
     "django_googler",
     # Internal apps
     "contacts",
+
+    # all auth
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount.providers.linkedin',
 ]
 
 MIDDLEWARE = [
@@ -36,6 +41,8 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    # All-auth
+    "allauth.account.middleware.AccountMiddleware",
 ]
 
 ROOT_URLCONF = "crm.urls"

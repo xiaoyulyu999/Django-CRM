@@ -4,6 +4,8 @@ src/local-cdn
 src/contacts/samples
 .DS_Store
 .idea
+*.iml
+*.xml
 
 # Python-generated files
 __pycache__/

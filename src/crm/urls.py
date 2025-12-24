@@ -20,5 +20,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    # path("auth/", include("django_googler.urls.default", namespace="djangoogler")),
+    path("auth/", include("django_googler.urls.default")),
+    path('accounts/', include('allauth.urls')),
+
 ]
