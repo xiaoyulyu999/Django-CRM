@@ -122,4 +122,4 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
-
+SOCIALACCOUNT_STORE_TOKENS=True
