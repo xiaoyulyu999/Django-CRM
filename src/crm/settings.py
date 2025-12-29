@@ -8,7 +8,7 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-
+LOGIN_REDIRECT_URL = "/"
 
 # Application definition
 
@@ -26,12 +26,11 @@ INSTALLED_APPS = [
     "django_googler",
     # Internal apps
     "contacts",
-
     # all auth
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-    'allauth.socialaccount.providers.openid_connect',
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
+    "allauth.socialaccount.providers.openid_connect",
 ]
 
 MIDDLEWARE = [
@@ -48,6 +47,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "crm.urls"
 
+TEMPLATES_DIR = BASE_DIR / "templates"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
@@ -118,8 +118,8 @@ GOOGLE_OAUTH_CLIENT_SECRET = os.environ.get("GOOGLE_OAUTH_CLIENT_SECRET")
 GOOGLE_OAUTH_CLIENT_ID = os.environ.get("GOOGLE_OAUTH_CLIENT_ID")
 
 AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',
-    'allauth.account.auth_backends.AuthenticationBackend',
+    "django.contrib.auth.backends.ModelBackend",
+    "allauth.account.auth_backends.AuthenticationBackend",
 ]
 
-SOCIALACCOUNT_STORE_TOKENS=True
+SOCIALACCOUNT_STORE_TOKENS = True
