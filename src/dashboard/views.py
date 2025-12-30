@@ -13,3 +13,13 @@ def dashboard_index(request, *args, **kwargs):
         "colors": ["red", "blue"],
     }
     return render(request, "dashboard/main.html", template_context)
+
+
+def get_image(request, *args, **kwargs):
+    """
+    nginx - load folder -
+    object storage - aws s3 - cloudflare r2 -
+    django-storage
+    whitenoise
+    """
+    pass

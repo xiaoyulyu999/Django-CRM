@@ -2,6 +2,7 @@ src/mystaticfiles/custom-theme
 src/mystaticfiles/vendors
 src/local-cdn
 src/contacts/samples
+src/static-root
 .DS_Store
 .idea
 *.iml
