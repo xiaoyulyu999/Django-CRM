@@ -115,6 +115,9 @@ STATIC_URL = "static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "static-root")
 # manage.py collectstatic
 
+STATICFILES_DIRS = [
+    BASE_DIR / "my_static",
+]
 # Googlere API
 GOOGLE_OAUTH_CLIENT_SECRET = os.environ.get("GOOGLE_OAUTH_CLIENT_SECRET")
 GOOGLE_OAUTH_CLIENT_ID = os.environ.get("GOOGLE_OAUTH_CLIENT_ID")
