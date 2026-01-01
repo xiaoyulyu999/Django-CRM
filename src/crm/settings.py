@@ -5,7 +5,7 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 LOGIN_REDIRECT_URL = "/"
@@ -112,13 +112,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-STATIC_URL = "static/"
-STATIC_ROOT = os.path.join(BASE_DIR, "mystaticfiles")
-# manage.py collectstatic
 
-STATICFILES_DIRS = [
-    BASE_DIR / "my_static",
-]
+# manage.py collectstatic
+STATIC_URL = "/static/"
+
+# STATICFILES_DIRS = [
+#     BASE_DIR / 'mystaticfiles',
+# ]
+
+# django server only work on this dir static_root
+STATIC_ROOT = BASE_DIR / "mystaticfiles"
+
+
 # Googlere API
 GOOGLE_OAUTH_CLIENT_SECRET = os.environ.get("GOOGLE_OAUTH_CLIENT_SECRET")
 GOOGLE_OAUTH_CLIENT_ID = os.environ.get("GOOGLE_OAUTH_CLIENT_ID")
